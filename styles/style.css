@@ -1,0 +1,41 @@
+*{
+    background-color: white;
+    font-family: 'Roboto Mono', monospace;
+}
+
+h1{
+    color: #03a062;
+    text-align: center;
+}
+
+a{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+}
+
+#firstButton{
+    display: flex;
+    justify-content: center;
+}
+
+.botoes.active{
+    visibility: visible;
+}
+
+.botoes{
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+}
+
+button{
+    background-color: #03a062;
+    color: white;
+    padding: 2rem;
+}
+
+button:hover{
+    background-color: #00e087
+}

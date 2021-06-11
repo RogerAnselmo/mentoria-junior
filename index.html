@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JS</title>
+
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Resolução de Exercícios de JavaScript</h1>
+    <a href="http://professor.leonardomeirelles.com/wp/lista-de-exercicios-javascript/" target="_blank">Link para os
+        enunciados das questões</a>
+    <br>
+    <br>
+
+    <div id="firstButton">
+        <button onclick="Modal.mostrar()" class="principal">Mostrar resolução</button>
+        <button onclick="Modal.alterarContDiv()" class="principal">Ocultar resolução</button>
+    </div>
+
+    <div class="botoes">
+        <button onclick="calculaMedia()">Calcula Média</button>
+        <button onclick="calculaRaiz()">Calcula Raíz</button>
+        <button onclick="calculaMaior()">Calcula Maior</button>
+        <button onclick="maior18()">Maioridade</button>
+        <button onclick="mostraAltura()">Maior Altura</button>
+    </div>
+
+    <center>        
+        <table class="table-aulas">
+            <thead>
+                <tr>
+                    <th>ID USUÁRIO</th>
+                    <th>NOME</th>
+                    <th>IDADE</th>
+                </tr>
+            </thead>
+            <tbody class="body-table">
+            </tbody>
+        </table>
+    </center>
+
+
+    <form>
+        <div>
+            <span> ID usuário:</span>
+            <input id="id-usuario"/>
+        </div>
+        <div>
+            <span> nome usuário:</span>
+            <input id="nome-usuario"/>
+        </div>
+        <div>
+            <span> idade usuário:</span>
+            <input id="idade-usuario"/>
+        </div>
+        <button id="submit-form" onclick="adicionarUsuario()">salvar</button>
+    </form>
+
+
+</body>
+
+<script>
+    let Modal = {
+        mostrar() {
+            document.querySelector('.botoes').classList.add('active');
+            //document.querySelector('.principal').textContent = "Brasil";
+        },
+        ocultar() {
+            document.querySelector('.botoes').classList.remove('active');
+        },
+        alterarContDiv(){
+            document.querySelector(".botoes").innerHTML = conteudoDIV();
+        }
+    }
+    
+    function conteudoDIV() {
+        return "<button>botão</button>"
+    }
+
+</script>
+
+<script src="js/media.js"></script>
+<script src="js/maior.js"></script>
+<script src="js/maioridade.js"></script>
+<script src="js/altura.js"></script>
+<script src="js/quadrado.js"></script>
+<script src="js/inserir-usuario.js"></script>
+<script src="js/chamada-http.js"></script>
+</html>
